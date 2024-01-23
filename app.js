@@ -15,10 +15,14 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))//its used to get qury param from encoded or encripted url.
 // app.use(cors({
 //     origin:[process.env.FRONTEND_URL],
-//     Credential:true
+//     Credentials:true
 // }))
+// app.use(cors({
+//     origin: 'http://localhost:5173', // Specify the allowed origin directly
+//     credentials: true,
+//   }));
 app.use(cors({
-    origin: 'http://localhost:5173', // Specify the allowed origin directly
+    origin: 'https://lms-frontend-ashy.vercel.app', // Specify the allowed origin directly
     credentials: true,
   }));
 app.use(cookieParser())
